@@ -58,8 +58,8 @@ export const TRANSACTION_PERIODS = [
   "últimos 3 días",
 ];
 
-export const BASE_PATH = "localhost:3000";
+export const BASE_PATH = "https://push-notifications-webapis.onrender.com";
 
 export const CART = "cart";
 
-export const URL = "http://localhost:3030";
+export const URL = "https://push-notifications-webapis.onrender.com";
