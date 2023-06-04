@@ -19,7 +19,7 @@ export default function FeedItem(props) {
   return (
     <div className={styles.feedItem_wrapper}>
       <ItemHeader avatar={avatar} userAddress={owner} title={account.title} />
-      {/* <ItemImage image={account.image} alt="post" /> */}
+      <ItemImage image={account.image} alt="post" /> 
       
       <ItemFoot
         title={account.title}
