@@ -28,6 +28,7 @@ import { useRouter } from "next/router";
 
 const stripeInit = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
+
 export default function Fund() {
   const [tokensAmount, setTokensAmount] = useState(1);
   const [page, setPage] = useState(1);
