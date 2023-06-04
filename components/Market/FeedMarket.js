@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import ItemButtons from "./ItemButtons";
+
 import MarketFoot from "./MarketFoot";
 import ItemHeader from "./ItemHeader";
 
@@ -11,7 +11,9 @@ export default function FeedMarket(props) {
   const user = data.owner.toString();
   const router = useRouter();
   console.log("key", key);
-  if (data.id.toString()=='1') {console.log("key unique", data.id.toString())} else (console.log("key multi", data.id.toString()));
+  if (data.id.toString() == "1") {
+    console.log("key unique", data.id.toString());
+  } else console.log("key multi", data.id.toString());
   const handleRedirect = () => {
     const marketUrl = `/market/${data.owner.toString()}`;
     router.push(marketUrl);
