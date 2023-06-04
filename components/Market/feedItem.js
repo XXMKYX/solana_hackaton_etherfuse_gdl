@@ -20,17 +20,7 @@ export default function FeedItem(props) {
     <div className={styles.feedItem_wrapper}>
       <ItemHeader avatar={avatar} userAddress={owner} title={account.title} />
       {/* <ItemImage image={account.image} alt="post" /> */}
-      <ItemButtons
-        postId={postId}
-        owner={owner}
-        title={account.title}
-        image={account.image}
-        description={account.description}
-        price={account.price}
-        priceOffer={account.priceOffer}
-        setEditPostModalOpen={setEditPostModalOpen}
-        toggleEditPostModal={toggleEditPostModal}
-      />
+      
       <ItemFoot
         title={account.title}
         description={account.description}
