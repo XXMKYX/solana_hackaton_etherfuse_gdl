@@ -1,5 +1,3 @@
-import ItemButtons from "./ItemButtons";
-
 import ItemHeader from "./ItemHeader";
 
 import styles from "./FeedItem.module.scss";
@@ -20,7 +18,7 @@ export default function FeedItem(props) {
 
   return (
     <div className={styles.feedItem_wrapper}>
-      <ItemHeader avatar={avatar} userAddress={owner} title={account.title}/>
+      <ItemHeader avatar={avatar} userAddress={owner} title={account.title} />
       <ItemImage image={account.image} alt="post" />
       <ItemButtons
         postId={postId}
