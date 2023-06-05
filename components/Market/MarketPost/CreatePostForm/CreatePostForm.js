@@ -17,7 +17,7 @@ export default function CreateUserModal(props) {
   const [priceOffer, setPriceOffer] = useState("");
   const [available, setAvailable] = useState("");
   const [yes, setYes] = useState(["0", "1"]);
-  
+
   const [titleRegex, setTitleRegex] = useState(/^[a-zA-Z\s]*$/);
   const [priceRegex, setPriceRegex] = useState(/^[0-9]+$/);
   const [availableStates, setAvailableStates] = useState("0", "1");
@@ -28,51 +28,37 @@ export default function CreateUserModal(props) {
   const onCloseModal = () => setShowModal(false);
 
   const onCreate = (e) => {
-    if (
-      title.length == 0 ||
-      !titleRegex.test(title))
-      {
-        setText("El titulo no puede estar vacio, ni puede tener numeros ");
-        setShowToast(true);
-        return null;
-      
-      }
-      else if (image.length == 0){
-        setText("La imagen no puede estar vacia");
-        setShowToast(true);
-        return null;
-      
-      }
-
-      else if (description.length == 0){
-        setText("La descripcion no puede estar vacia ");
-        setShowToast(true);
-        return null;
-      
-      }
-      else if (price == 0 ||
-      !priceRegex.test(price)){
-        setText("El precio no puede estar vacio y unicamente puede contener numeros ");
-        setShowToast(true);
-        return null;
-      
-      }
-      else if (priceOffer == 0 ||
-      !priceRegex.test(priceOffer)){
-        setText("El precio de oferta no puede estar vacio y unicamente puede contener numeros");
-        setShowToast(true);
-        return null;
-      
-      }
-      else if (!availableStates.includes(available)
-    ) {
-      setText("Por favor elije si el producto esta disponible o no disponible. ");
+    if (title.length == 0 || !titleRegex.test(title)) {
+      setText("El titulo no puede estar vacio, ni puede tener numeros ");
       setShowToast(true);
       return null;
-    
-    
-    
-    } else if (priceOffer <= price) {
+    } else if (image.length == 0) {
+      setText("La imagen no puede estar vacia");
+      setShowToast(true);
+      return null;
+    } else if (description.length == 0) {
+      setText("La descripcion no puede estar vacia ");
+      setShowToast(true);
+      return null;
+    } else if (price == 0 || !priceRegex.test(price)) {
+      setText(
+        "El precio no puede estar vacio y unicamente puede contener numeros "
+      );
+      setShowToast(true);
+      return null;
+    } else if (priceOffer == 0 || !priceRegex.test(priceOffer)) {
+      setText(
+        "El precio de oferta no puede estar vacio y unicamente puede contener numeros"
+      );
+      setShowToast(true);
+      return null;
+    } else if (!availableStates.includes(available)) {
+      setText(
+        "Por favor elije si el producto esta disponible o no disponible. "
+      );
+      setShowToast(true);
+      return null;
+    } else if (parseFloat(priceOffer) <= parseFloat(price)) {
       setText("El precio en descuento debe ser menor al precio original");
       setShowToast(true);
       return null;
