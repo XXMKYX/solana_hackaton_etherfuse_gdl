@@ -41,8 +41,8 @@ export default function Home() {
             tiempo en reactivarse, esto por la versión gratii del host
           </p>
           <p>
-            - La TDC en fondeo es dummy, usen 4242 4242 4242 42 ... Hasta que se
-            canse el dedo
+            - La TDC en fondeo es dummy, usen 4242 4242 4242 42 ... Y presionar una unica vez el boton de confirmar compra ,
+              esperar a que salga la phantom, esto puede tardar por lo mencionado en el punto anterior
           </p>
 
           <a>Por si gustan ver el token en: </a>
