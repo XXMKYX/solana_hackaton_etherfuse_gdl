@@ -49,6 +49,11 @@ export default function Home() {
           <p>
             https://translator.shyft.to/address/HJXP1SjT3w1NzmAjq7z5hUMicf4qYPcdiZvFmpECpv92?cluster=devnet
           </p>
+
+          <a>Repo al Backend donde se implemento SHIFT: </a>
+          <p>
+            https://github.com/elJamesSnz/push_notifications_webapis
+          </p>
         </div>
       </MainLayout>
     </>
