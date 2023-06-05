@@ -29,7 +29,27 @@ export default function Home() {
 
   return (
     <>
-      <MainLayout></MainLayout>
+      <MainLayout>
+        <div className={styles.principal_wrapper}>
+          <a>Consideraciones para probar el MVP</a>
+          <p>- Recargar la página al hacer registros </p>
+          <p>- Las peticiones para fondear o retirar tardan un poco </p>
+          <p>
+            - Si las peticiones de fondeo / pago en carrito y retiro tardan mas
+            de 2 min es debido a que el backend entró en hibernación y toma ese
+            tiempo en reactivarse, esto por la versión gratii del host
+          </p>
+          <p>
+            - La TDC en fondeo es dummy, usen 4242 4242 4242 42 ... Hasta que se
+            canse el dedo
+          </p>
+
+          <a>Por si gustan ver el token en: </a>
+          <p>
+            https://translator.shyft.to/address/HJXP1SjT3w1NzmAjq7z5hUMicf4qYPcdiZvFmpECpv92?cluster=devnet
+          </p>
+        </div>
+      </MainLayout>
     </>
   );
 }

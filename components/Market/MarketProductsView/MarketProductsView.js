@@ -21,7 +21,7 @@ function ProductsCards(props) {
           <div className={styles.productsView_main}>
             <div className={styles.productsView_img}>
               <div className={styles.productsView_img_containter}>
-                <Image
+                <img
                   className={styles.item_image_img}
                   src={product.account.image}
                   layout="fill"
