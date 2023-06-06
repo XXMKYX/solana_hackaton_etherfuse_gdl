@@ -58,7 +58,7 @@ export default function CreateUserModal(props) {
       );
       setShowToast(true);
       return null;
-    } else if (parseFloat(priceOffer) <= parseFloat(price)) {
+    } else if (parseFloat(priceOffer) > parseFloat(price)) {
       setText("El precio en descuento debe ser menor al precio original");
       setShowToast(true);
       return null;
